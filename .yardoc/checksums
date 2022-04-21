@@ -1,0 +1,7 @@
+lib/belvo.rb a2e3ce2386b2d9299ef20eddf6b4d0eb1b639ae4
+lib/belvo/http.rb 53dab379c63a4d0a09eb1992d9d2b0bbe0d6244d
+lib/belvo/utils.rb 1d74cd15ba569e98e00afad9567b9d5322eecb20
+lib/belvo/options.rb 864c6ae62af7b27f8ac7a07c1d51b29804c78fab
+lib/belvo/version.rb 759ee86e7d068cad91247abf822bbf459babbe93
+lib/belvo/resources.rb 5063c2e697bdd499be447f6c6c4836d30b540e19
+lib/belvo/exceptions.rb d7a301cdf14e0f87f8e3d59257333dc32df873b3
