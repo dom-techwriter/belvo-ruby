@@ -1,0 +1,31 @@
+name: Ruby GitHub pages
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v1
+
+			- name: Set up Ruby
+			- uses: ruby/setup-rubyb@1
+				with:
+					ruby-version: 2.6
+
+			- name: Install required gems
+        run: |
+          gem install yard --no-document
+
+			- name: Build YARD documentation
+        run: yard doc
+
+			- name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./out
