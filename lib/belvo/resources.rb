@@ -192,6 +192,8 @@ module Belvo
     # @param options [TransactionOptions] Configurable properties
     # @return [Hash] created transactions details
     # @raise [RequestError] If response code is different than 2XX
+    # @example I'm trying a something here
+    # client.transactions.retrieve(link: "12345", date_from: "2019-01-01")
     def retrieve(link:, date_from:, options: nil)
       options = TransactionOptions.from(options)
       date_to = options.date_to || Date.today.to_s
