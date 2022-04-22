@@ -1,4 +1,4 @@
-name: Build & deploy documentation
+name: Build & deploy Ruby SDK documentation
 on:
   push:
     branches:
@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     name: Update gh-pages with docs
     steps:
-      - name: Checkout this repo
+      - name: Checkout Belvo Ruby SDK repo
         uses: actions/checkout@v2
       - name: Set up Ruby
         uses: actions/setup-ruby@v1
@@ -16,9 +16,9 @@ jobs:
           ruby-version: "2.7"
       - name: Install required gem dependencies
         run: gem install yard --no-document
-      - name: Build YARD Ruby Documentation
+      - name: Build RUBY SDK docs with YARD
         run: yardoc --output-dir docs
-      - name: Deploy
+      - name: Deploy docs to gh-pages branch
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
