@@ -13,7 +13,7 @@ jobs:
       - name: Set up Ruby
         uses: actions/setup-ruby@v1
         with:
-          ruby-version: "3.1.2"
+          ruby-version: "2.7"
       - name: Install required gem dependencies
         run: gem install yard --no-document
       - name: Build RUBY SDK docs with YARD
